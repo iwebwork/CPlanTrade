@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+5bq/jxzs7Xy72KjQxhDyCbuWryL5ZOUpXaLAYE//OKEI9syNDSS7lvzLdx6kD/dBO4Z7n45mnMuTX9zfkGxfQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Igor\\Desktop\\Meus Arquivos\\C# projetos\\CPlanTrade\\Classes\\Classes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

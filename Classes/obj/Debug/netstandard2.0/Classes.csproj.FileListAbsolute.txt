@@ -1,0 +1,8 @@
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\bin\Debug\netstandard2.0\Classes.deps.json
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\bin\Debug\netstandard2.0\Classes.dll
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\bin\Debug\netstandard2.0\Classes.pdb
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\obj\Debug\netstandard2.0\Classes.AssemblyInfoInputs.cache
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\obj\Debug\netstandard2.0\Classes.AssemblyInfo.cs
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\obj\Debug\netstandard2.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\obj\Debug\netstandard2.0\Classes.dll
+C:\Users\Igor\Desktop\Meus Arquivos\C# projetos\CPlanTrade\Classes\obj\Debug\netstandard2.0\Classes.pdb
