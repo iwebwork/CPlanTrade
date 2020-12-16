@@ -21,26 +21,10 @@ namespace CPlanTrade
             InitializeComponent();
         }
 
-        IFirebaseConfig ifc = new FirebaseConfig()
-        {
-            AuthSecret = "iu89vBVEQLL9PvidW5ChOBeHbbKoCJCAHTqiNhRz",
-            BasePath = "https://control-plain-trade-default-rtdb.firebaseio.com/"
-        };
-
-        IFirebaseClient client;
-
 
         private void Register_Load(object sender, EventArgs e)
         {
-            try
-            {
-                client = new FireSharp.FirebaseClient(ifc);
-            }
-            catch (Exception m)
-            {
-
-                MessageBox.Show(m.Message);
-            }
+        
 
         }
 
@@ -61,9 +45,26 @@ namespace CPlanTrade
                 Password = tbSenha.Text
             };
 
-            SetResponse set = client.Set(@"Users/" + tbLogin.Text, user);
+            IFirebaseClient client;
 
-            MessageBox.Show("Sucesso, usuario cadastrado com sucesso!");
+            IFirebaseConfig ifc = new FirebaseConfig()
+            {
+                AuthSecret = "iu89vBVEQLL9PvidW5ChOBeHbbKoCJCAHTqiNhRz",
+                BasePath = "https://control-plain-trade-default-rtdb.firebaseio.com/"
+            };
+            try
+            {
+                client = new FireSharp.FirebaseClient(ifc);
+                SetResponse set = client.Set(@"Users/" + user.Login, user);
+                MessageBox.Show("Sucesso, usuario cadastrado com sucesso!");
+            }
+            catch (Exception m)
+            {
+
+                MessageBox.Show(m.Message);
+            }
+
+            
             FormLogin lo = new FormLogin();
             this.Hide();
             lo.Show();

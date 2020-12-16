@@ -20,25 +20,10 @@ namespace CPlanTrade
         {
             InitializeComponent();
         }
-
-        IFirebaseConfig ifc = new FirebaseConfig()
-        {
-            AuthSecret = "iu89vBVEQLL9PvidW5ChOBeHbbKoCJCAHTqiNhRz",
-            BasePath = "https://control-plain-trade-default-rtdb.firebaseio.com/"
-        };
-
-        IFirebaseClient client;
         
         private void Login_Load(object sender, EventArgs e)
         {
-            try
-            {
-                client = new FireSharp.FirebaseClient(ifc);
-            }
-            catch (Exception m)
-            {
-                MessageBox.Show(m.Message);
-            }
+            
 
         }
 
@@ -58,9 +43,7 @@ namespace CPlanTrade
                 MessageBox.Show("Por favor preencha todos os campos!");
                 return;
             }
-
-            FirebaseResponse response = client.Get(@"Users/" + tbLogin.Text);
-            User Responseuser = response.ResultAs<User>();
+            
             User currentUser = new User()
             {
                 Login = tbLogin.Text,
@@ -68,14 +51,36 @@ namespace CPlanTrade
 
             };
 
-            if (User.IsEqual(Responseuser, currentUser))
+            IFirebaseClient client;
+
+            IFirebaseConfig ifc = new FirebaseConfig()
             {
-                MessageBox.Show("Usuario logado com sucesso!");
-            }
-            else
+                AuthSecret = "iu89vBVEQLL9PvidW5ChOBeHbbKoCJCAHTqiNhRz",
+                BasePath = "https://control-plain-trade-default-rtdb.firebaseio.com/"
+            };
+
+            try
             {
-                MessageBox.Show(User.printError());
+
+                client = new FireSharp.FirebaseClient(ifc);
+                FirebaseResponse response = client.Get(@"Users/" + tbLogin.Text);
+                User Responseuser = response.ResultAs<User>();
+                if (User.IsEqual(Responseuser, currentUser))
+                {
+                    MessageBox.Show("Usuario logado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show(User.printError());
+                }
+
             }
+            catch (Exception m)
+            {
+                MessageBox.Show(m.Message);
+            }
+
+            
 
 
         }
